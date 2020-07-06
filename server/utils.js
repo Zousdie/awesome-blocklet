@@ -1,6 +1,8 @@
-module.exports.asyncBatch = (tasks) => {
-  let count = 0;
+module.exports.asyncBatch = (tasks, race = false) => {
   const length = tasks.length;
+  const responseCache = new Array(length).fill(null);
+
+  let count = 0;
 
   return new Promise((resolve) => {
     tasks.forEach(({ runner, responseProcesser }, index) => {
@@ -9,13 +11,14 @@ module.exports.asyncBatch = (tasks) => {
           count += 1;
 
           const currentRes = responseProcesser(result);
+          responseCache[index] = currentRes;
 
-          if (currentRes) {
+          if (currentRes && race) {
             resolve(currentRes);
           }
 
           if (count === length) {
-            resolve(null);
+            resolve(race ? null : responseCache);
           }
         })
         .catch((err) => {
@@ -24,7 +27,7 @@ module.exports.asyncBatch = (tasks) => {
           console.log('request error.', err);
 
           if (count === length) {
-            resolve(null);
+            resolve(race ? null : responseCache);
           }
         });
     });

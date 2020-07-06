@@ -68,6 +68,6 @@ module.exports = (app) => {
   app.get('/api/search', async (req, res) => {
     const result = await search(req.query.key);
 
-    res.jsonp(result);
+    res.jsonp(result.filter((it) => !!it));
   });
 };
