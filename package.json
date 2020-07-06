@@ -26,10 +26,10 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "clent:start": "react-scripts start",
-    "clent:build": "react-scripts build",
+    "client:start": "react-scripts start",
+    "client:build": "react-scripts build",
     "server:start": "node ./server/index.js",
-    "build": ""
+    "abt:build": "yarn client:build && abtnode bundle"
   },
   "eslintConfig": {
     "extends": "react-app"

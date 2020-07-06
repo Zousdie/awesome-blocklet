@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # blocklet build files
+_blocklet
 blocklet.js
