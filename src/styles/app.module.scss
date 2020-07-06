@@ -1,0 +1,15 @@
+@import '~normalize.css';
+
+:root {
+  --header-height: 64px;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}

@@ -1,13 +1,15 @@
 import React from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
-import style from './app.module.scss';
+import style from './styles/app.module.scss';
 
 function App() {
+  const [query, setQuery] = React.useState('');
+
   return (
     <div className={style.container}>
-      <Header />
-      <Main />
+      <Header onSearch={setQuery} />
+      <Main query={query} />
     </div>
   );
 }

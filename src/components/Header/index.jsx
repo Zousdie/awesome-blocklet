@@ -6,16 +6,21 @@ import style from './style.module.scss';
 const Header = (props) => {
   const { onSearch } = props;
 
-  const delayedQuery = React.useCallback(debounce((q) => {
-    if (typeof onSearch === 'function') {
-      onSearch(q);
-    }
-    console.log(q);
-  }, 300), [onSearch]);
+  const delayedQuery = React.useCallback(
+    debounce((q) => {
+      if (typeof onSearch === 'function') {
+        onSearch(q);
+      }
+    }, 300),
+    [onSearch],
+  );
 
-  const handleInputChage = React.useCallback((event) => {
-    delayedQuery(event.target.value);
-  }, [delayedQuery]);
+  const handleInputChage = React.useCallback(
+    (event) => {
+      delayedQuery(event.target.value);
+    },
+    [delayedQuery],
+  );
 
   return (
     <header className={style.container}>
@@ -26,10 +31,11 @@ const Header = (props) => {
             <path d="M22.15 38.077l10.826-6.25-10.825-18.75-10.825 18.75z" />
           </g>
         </svg>
-        <h3>Awesome Blocklet</h3>
+        <h3>Awesome Explorer</h3>
       </div>
 
       <TextField
+        autoFocus
         variant="outlined"
         label="search"
         size="small"
@@ -39,6 +45,6 @@ const Header = (props) => {
       />
     </header>
   );
-}
+};
 
-export default Header;
+export default React.memo(Header);

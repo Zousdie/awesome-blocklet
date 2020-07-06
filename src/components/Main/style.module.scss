@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 16px;
+  max-width: 1200px;
+  min-height: calc(100% - var(--header-height));
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+}
+
+.content {
+  & + & {
+    margin-top: 24px;
+  }
+}
