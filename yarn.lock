@@ -61,20 +61,6 @@
     google-auth-library "^6.0.1"
     lodash "^4.17.15"
 
-"@arcblock/forge-sdk@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.npm.taobao.org/@arcblock/forge-sdk/download/@arcblock/forge-sdk-1.3.3.tgz#1a4a14b208ea93cea5418997b503960f5ba77f50"
-  integrity sha1-GkoUsgjqk86lQYmXtQOWD1unf1A=
-  dependencies:
-    "@arcblock/did-util" "^1.3.3"
-    "@arcblock/forge-message" "^1.3.1"
-    "@arcblock/forge-util" "^1.2.13"
-    "@arcblock/forge-wallet" "^1.3.3"
-    "@arcblock/graphql-client" "^1.3.3"
-    "@arcblock/grpc-client" "^1.3.3"
-    debug "^4.1.1"
-    react-app-polyfill "^1.0.1"
-
 "@arcblock/forge-util@^1.2.13":
   version "1.2.13"
   resolved "https://registry.npm.taobao.org/@arcblock/forge-util/download/@arcblock/forge-util-1.2.13.tgz#fab130c6766a6c13c3742c6908f0b994c54f2a87"
@@ -110,19 +96,6 @@
     phoenix-channels "^1.0.0"
     react-app-polyfill "^1.0.1"
     wolfy87-eventemitter "^5.2.5"
-
-"@arcblock/grpc-client@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.npm.taobao.org/@arcblock/grpc-client/download/@arcblock/grpc-client-1.3.3.tgz#6d6d392e1d74e2bc4aaf7e6dd812d562e0e090cb"
-  integrity sha1-bW05Lh104rxKr35t2BLVYuDgkMs=
-  dependencies:
-    "@arcblock/client-extension" "^1.3.3"
-    "@arcblock/forge-message" "^1.3.1"
-    "@arcblock/forge-proto" "^1.3.1"
-    "@grpc/grpc-js" "^1.0.5"
-    debug "^4.1.1"
-    google-auth-library "^6.0.1"
-    lodash "^4.17.15"
 
 "@arcblock/mcrypto@^1.2.13":
   version "1.2.13"
@@ -9448,6 +9421,15 @@ query-string@^4.1.0:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
+query-string@^6.13.1:
+  version "6.13.1"
+  resolved "https://registry.npm.taobao.org/query-string/download/query-string-6.13.1.tgz?cache=0&sync_timestamp=1591853346096&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fquery-string%2Fdownload%2Fquery-string-6.13.1.tgz#d913ccfce3b4b3a713989fe6d39466d92e71ccad"
+  integrity sha1-2RPM/OO0s6cTmJ/m05Rm2S5xzK0=
+  dependencies:
+    decode-uri-component "^0.2.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -10568,6 +10550,11 @@ spdy@^4.0.1:
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
 
+split-on-first@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/split-on-first/download/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+  integrity sha1-9hCv7uOxK84dDDBCXnY5i3gkml8=
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -10681,6 +10668,11 @@ strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
   integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
+
+strict-uri-encode@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/strict-uri-encode/download/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+  integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
 
 string-length@^2.0.0:
   version "2.0.0"
