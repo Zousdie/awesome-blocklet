@@ -17,8 +17,6 @@ const chains = [
 ];
 
 function search(key) {
-  if (key === null || key === undefined || key === '') return null;
-
   const tasks = [];
 
   chains.forEach(({ name, client }) => {
@@ -66,8 +64,14 @@ function search(key) {
 
 module.exports = (app) => {
   app.get('/api/search', async (req, res) => {
-    const result = await search(req.query.key);
+    const { key } = req.query;
 
-    res.jsonp(result.filter((it) => !!it));
+    if (!key) {
+      res.json([]);
+      return;
+    }
+
+    const result = await search(key);
+    res.json(result.filter((it) => !!it));
   });
 };
